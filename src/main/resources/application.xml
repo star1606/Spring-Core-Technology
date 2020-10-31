@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans"
+>
+<!--bookSerivce에서 bookRepository 쓰려면 레퍼런스를 빈으로 주입해야함 -->
+	<bean id="bookService" class="">
+		<property name="bookRepository" ref="bookRepository"></property>
+		<!-- ref는 setter에 들어올 수 있는 빈의 id를 넣는다 -->
+	</bean>
+	<bean id="bookRepository" class="" />
+
+</beans>
