@@ -8,6 +8,11 @@ public class BookSerivce {
 	@Autowired // 의존 관계 설정
 	BookRepository bookRepository;
 	
+	
+	public BookSerivce(BookRepository bookRepository) {
+		this.bookRepository = bookRepository;
+	}
+	
 	public void setBookRepository(BookRepository bookRepository) {
 		this.bookRepository = bookRepository;
 	}
