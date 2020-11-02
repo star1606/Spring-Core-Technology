@@ -13,6 +13,9 @@ public class LectureexApplication {
 		SpringApplication.run(LectureexApplication.class, args);
 		//ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
 		//context.
+		
+		//var app = new SpringApplication(LectureexApplication.class);
+	
 	}
 
 }
