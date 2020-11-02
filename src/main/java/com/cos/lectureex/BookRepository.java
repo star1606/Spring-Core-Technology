@@ -4,6 +4,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BookRepository {
+public interface BookRepository {
 
 }
