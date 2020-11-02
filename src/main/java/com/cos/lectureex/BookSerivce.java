@@ -2,6 +2,8 @@ package com.cos.lectureex;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,13 +38,23 @@ public class BookSerivce {
 //	@Autowired
 //	BookRepository bookRepository;
 	
-	@Autowired // 타입만으로 주입받는게 아니라 이름도 확인함
-	List<BookRepository> bookRepositories; 
+	//@Autowired // 타입만으로 주입받는게 아니라 이름도 확인함
+	//List<BookRepository> bookRepositories; 
 	// 이렇게 하면 bookRepository타입의 모든 빈을 주입받을 수 있다.
 	
-	public void printBookRepository() {
-		this.bookRepositories.forEach(System.out::println);
-		// System.out::println 이거 뭐지
+	
+	@Autowired
+	BookRepository myBookRepository;
+	
+	@PostConstruct
+	public void setup() {
+		System.out.println(myBookRepository.getClass());
 	}
+	
+	
+//	public void printBookRepository() {
+//		this.bookRepositories.forEach(System.out::println);
+		// System.out::println 이거 뭐지
+//	}
 	
 }
