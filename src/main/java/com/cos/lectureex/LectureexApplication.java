@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 
 @SpringBootApplication
-//@EnableAsync
+@EnableAsync
 //@PropertySource("classpath:/app.properties")
 public class LectureexApplication {
 

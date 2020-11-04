@@ -13,7 +13,8 @@ import org.springframework.stereotype.Component;
 public class MyEventHandler {
 
 	@EventListener
-	@Order(Ordered.HIGHEST_PRECEDENCE)
+	//@Order(Ordered.HIGHEST_PRECEDENCE)
+	@Async
 	public void handle(MyEvent event) {
 		System.out.println(Thread.currentThread().toString());
 		System.out.println("이벤트 받았다. 데이터는 " + event.getData());
