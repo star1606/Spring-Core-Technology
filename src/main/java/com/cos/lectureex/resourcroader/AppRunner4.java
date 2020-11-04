@@ -16,9 +16,16 @@ public class AppRunner4 implements ApplicationRunner {
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		Resource resource = resourceLoader.getResource("classpath:test.txt");
-		System.out.println(resource.exists()); // test.text를 가진 resource가 존재하는지 확인
-		// classpath 이하를 읽는다
+		
+		System.out.println("resourceLoader타입 : " + resourceLoader.getClass()); // applicationcontext(= ResourceLoader)의 타입을찍어본다.
+		
+		Resource resource = resourceLoader.getResource("classpath:test.txt"); // 접두어를 쓰는게 좋다
+		System.out.println("resource 타입 : " + resource.getClass()); //
 		System.out.println(resource.getDescription()); 
+		System.out.println("classpath를 넣으면: " + resource.exists()); // test.text를 가진 resource가 존재하는지 확인
+		
+		Resource resource2 = resourceLoader.getResource("test.txt"); // 접두어를 쓰는게 좋다
+		System.out.println("classpath를 빼면 : " + resource2.exists());
+		
 	}
 }
