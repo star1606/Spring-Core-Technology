@@ -19,11 +19,11 @@ public class AppRunner2 implements ApplicationRunner {
 		
 		//System.out.println(messageSource.getClass());
 		// 바로 쓸 수 있음
-		while(true) {
-			System.out.println(messageSource.getMessage("greeting", new String[] {"lee"}, Locale.KOREA));
-			System.out.println(messageSource.getMessage("greeting", new String[] {"lee"}, Locale.getDefault()));
-			Thread.sleep(1000l); // 1초마다 찍는다
-		}
+		//while(true) {
+			//System.out.println(messageSource.getMessage("greeting", new String[] {"lee"}, Locale.KOREA));
+			//System.out.println(messageSource.getMessage("greeting", new String[] {"lee"}, Locale.getDefault()));
+			//Thread.sleep(1000l); // 1초마다 찍는다
+		//}
 		
 		
 	}
