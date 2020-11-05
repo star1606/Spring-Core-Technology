@@ -10,11 +10,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 public class EventEditor extends PropertyEditorSupport {
 	
 	
-	// 쓰는방법
-	@InitBinder
-	public void init(WebDataBinder webDataBinder) {
-		webDataBinder.registerCustomEditor(Event.class, new EventEditor());
-	}
+
 	
 	@Override
 	public String getAsText() {
