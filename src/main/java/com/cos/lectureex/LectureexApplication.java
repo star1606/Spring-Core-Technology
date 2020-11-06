@@ -1,6 +1,7 @@
 package com.cos.lectureex;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,12 @@ public class LectureexApplication {
 
 	public static void main(String[] args) {
 
+		// 스프링은 기본적으로 웹애플리케이션을 띄우는데 웹애플리케이션을 안띄우고 자바 메인 메소드를 실행시키는 법
+//		SpringApplication app = new SpringApplication(LectureexApplication.class);
+//		app.setWebApplicationType(WebApplicationType.NONE);
+//		app.run(args);
+		
+		
 		SpringApplication.run(LectureexApplication.class, args);
 		// ApplicationContext context = new
 		// ClassPathXmlApplicationContext("application.xml");
